@@ -4,28 +4,30 @@
 
 #
 # This file was created with the following call:
-#   .Call("wrap__make_rusttest_wrappers", use_symbols = TRUE, package_name = "rusttest")
+#   .Call("wrap__make_eudexr_wrappers", use_symbols = TRUE, package_name = "eudexr")
 
 #' @usage NULL
-#' @useDynLib rusttest, .registration = TRUE
+#' @useDynLib eudexr, .registration = TRUE
 NULL
 
-#' Return string `"Hello world!"` to R.
 #' @export
-hello_world <- function() .Call(wrap__hello_world)
+Difference <- new.env(parent = emptyenv())
 
-#' @export
-Hash <- new.env(parent = emptyenv())
+Difference$dist <- function() .Call(wrap__Difference__dist, self)
 
-Hash$new <- function(strings) .Call(wrap__Hash__new, strings)
+Difference$xor <- function() .Call(wrap__Difference__xor, self)
 
-#' @rdname Hash
+Difference$hamming <- function() .Call(wrap__Difference__hamming, self)
+
+Difference$similar <- function() .Call(wrap__Difference__similar, self)
+
+#' @rdname Difference
 #' @usage NULL
 #' @export
-`$.Hash` <- function (self, name) { func <- Hash[[name]]; environment(func) <- environment(); func }
+`$.Difference` <- function (self, name) { func <- Difference[[name]]; environment(func) <- environment(); func }
 
 #' @export
-`[[.Hash` <- `$.Hash`
+`[[.Difference` <- `$.Difference`
 
 
 # nolint end

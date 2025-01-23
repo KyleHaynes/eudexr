@@ -1,7 +1,7 @@
 TARGET_DIR = ./rust/target
 LIBDIR = $(TARGET_DIR)/release
-STATLIB = $(LIBDIR)/librusttest.a
-PKG_LIBS = -L$(LIBDIR) -lrusttest
+STATLIB = $(LIBDIR)/libeudexr.a
+PKG_LIBS = -L$(LIBDIR) -leudexr
 
 all: C_clean
 

@@ -1,11 +1,12 @@
 [package]
-name = 'rusttest'
+name = 'eudexr'
 version = '0.1.0'
 edition = '2021'
 
 [lib]
 crate-type = [ 'staticlib' ]
-name = 'rusttest'
+name = 'eudexr'
 
 [dependencies]
 extendr-api = '*'
+textdistance = "1.1.1"  # Use the latest version available on crates.io
