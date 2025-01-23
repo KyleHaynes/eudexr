@@ -1,6 +1,5 @@
 //! Jaro similarity
-// use crate::{Algorithm, Result};
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 use alloc::vec;
 
 /// [Jaro similarity] is calculated based on the number of transpositions to turn one string into the other.

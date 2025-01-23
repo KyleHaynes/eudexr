@@ -1,7 +1,7 @@
 //! Overlap coefficient
-
+#![cfg(feature = "std")]
 use crate::counter::Counter;
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 
 /// [Overlap similarity] is the size of the intersection divided by the smaller of the size of the two sets.
 ///

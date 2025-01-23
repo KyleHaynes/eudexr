@@ -1,7 +1,7 @@
 //! Sørensen-Dice coefficient
-
+#![cfg(feature = "std")]
 use crate::counter::Counter;
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 
 /// [Sørensen–Dice similarity] is a ratio of common chars to total chars in the given strings.
 ///

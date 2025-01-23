@@ -1,6 +1,5 @@
 //! Hamming distance
-// use crate::{Algorithm, Result};
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 
 /// [Hamming distance] is the number of positions at which the corresponding symbols are different.
 ///

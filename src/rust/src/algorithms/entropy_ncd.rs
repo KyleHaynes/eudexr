@@ -1,5 +1,5 @@
 //! Entropy-based Normalized Compression Distance
-
+#![cfg(feature = "std")]
 use crate::counter::Counter;
 use crate::{Algorithm, Result};
 use core::hash::Hash;

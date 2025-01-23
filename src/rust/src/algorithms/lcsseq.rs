@@ -1,6 +1,5 @@
 //! Longest common subsequence
-// use crate::{Algorithm, Result};
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 use alloc::vec;
 use alloc::vec::Vec;
 

@@ -1,5 +1,3 @@
-use extendr_api::prelude::*;
-
 use super::Result;
 use alloc::vec::Vec;
 use core::hash::Hash;
@@ -11,7 +9,6 @@ use core::hash::Hash;
 ///     let res = h.for_str("abc", "acbd");
 ///     assert!(res.val() == 3);
 ///
-#[extendr]
 pub trait Algorithm<R> {
     /// Calculate distance/similarity for iterators.
     ///
@@ -138,9 +135,4 @@ mod tests {
         let h = Hamming::default();
         assert!(h.for_bigrams(s1, s2).val() == exp);
     }
-}
-
-extendr_module! {
-    mod algorithm;
-    use Algorithm;
 }

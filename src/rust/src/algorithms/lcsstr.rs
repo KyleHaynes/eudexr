@@ -1,6 +1,5 @@
 //! Longest common substring
-// use crate::{Algorithm, Result};
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 use alloc::vec;
 
 /// The length of the [Longest common substring].

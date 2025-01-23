@@ -1,7 +1,7 @@
 //! Roberts similarity
-
+#![cfg(feature = "std")]
 use crate::counter::Counter;
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 
 /// [Roberts similarity].
 ///

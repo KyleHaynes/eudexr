@@ -1,7 +1,6 @@
 //! Jaro-Winkler similarity
 use super::jaro::Jaro;
-// use crate::{Algorithm, Result};
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 
 /// [Jaro-Winkler similarity] is a variation of [`Jaro`] with a better rating for strings with a matching prefix.
 ///

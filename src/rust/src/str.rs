@@ -12,7 +12,7 @@ use super::*;
 ///     assert!(damerau_levenshtein("abc", "acbd") == 2); // "bc" swapped and "d" added
 ///
 /// [1]: https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance
-
+#[cfg(feature = "std")]
 pub fn damerau_levenshtein(s1: &str, s2: &str) -> usize {
     DamerauLevenshtein::default().for_str(s1, s2).val()
 }
@@ -25,7 +25,7 @@ pub fn damerau_levenshtein(s1: &str, s2: &str) -> usize {
 ///     assert!(damerau_levenshtein("abc", "acbd") == 2); // "bc" swapped and "d" added
 ///
 /// [1]: https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance
-
+#[cfg(feature = "std")]
 pub fn damerau_levenshtein_restricted(s1: &str, s2: &str) -> usize {
     let a = DamerauLevenshtein {
         restricted: true,
@@ -174,7 +174,7 @@ pub fn mlipns(s1: &str, s2: &str) -> usize {
 ///     assert!(bag("abc", "acbd") == 1);
 ///
 /// [1]: http://www-db.disi.unibo.it/research/papers/SPIRE02.pdf
-
+#[cfg(feature = "std")]
 pub fn bag(s1: &str, s2: &str) -> usize {
     Bag::default().for_str(s1, s2).val()
 }
@@ -199,7 +199,7 @@ pub fn lig3(s1: &str, s2: &str) -> f64 {
 ///     assert_eq!(jaccard("abc", "acbd"), 0.75);
 ///
 /// [1]: https://en.wikipedia.org/wiki/Jaccard_index
-
+#[cfg(feature = "std")]
 pub fn jaccard(s1: &str, s2: &str) -> f64 {
     Jaccard::default().for_str(s1, s2).nval()
 }
@@ -212,7 +212,7 @@ pub fn jaccard(s1: &str, s2: &str) -> f64 {
 ///     assert_eq!(sorensen_dice("abc", "acbd"), 0.8571428571428571);
 ///
 /// [1]:https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient
-
+#[cfg(feature = "std")]
 pub fn sorensen_dice(s1: &str, s2: &str) -> f64 {
     SorensenDice::default().for_str(s1, s2).nval()
 }
@@ -225,7 +225,7 @@ pub fn sorensen_dice(s1: &str, s2: &str) -> f64 {
 ///     assert_eq!(tversky("abc", "acbd"), 0.75);
 ///
 /// [1]: https://en.wikipedia.org/wiki/Tversky_index
-
+#[cfg(feature = "std")]
 pub fn tversky(s1: &str, s2: &str) -> f64 {
     Tversky::default().for_str(s1, s2).nval()
 }
@@ -238,7 +238,7 @@ pub fn tversky(s1: &str, s2: &str) -> f64 {
 ///     assert_eq!(overlap("abc", "acbd"), 1.0);
 ///
 /// [1]: https://en.wikipedia.org/wiki/Overlap_coefficient
-
+#[cfg(feature = "std")]
 pub fn overlap(s1: &str, s2: &str) -> f64 {
     Overlap::default().for_str(s1, s2).nval()
 }
@@ -251,7 +251,7 @@ pub fn overlap(s1: &str, s2: &str) -> f64 {
 ///     assert_eq!(cosine("abc", "acbd"), 0.8660254037844387);
 ///
 /// [1]: https://en.wikipedia.org/wiki/Cosine_similarity
-
+#[cfg(feature = "std")]
 pub fn cosine(s1: &str, s2: &str) -> f64 {
     Cosine::default().for_str(s1, s2).nval()
 }
@@ -310,7 +310,7 @@ pub fn smith_waterman(s1: &str, s2: &str) -> usize {
 ///
 /// [1]: https://en.wikipedia.org/wiki/Normalized_compression_distance
 /// [Entropy]: https://en.wikipedia.org/wiki/Entropy_(information_theory)
-
+#[cfg(feature = "std")]
 pub fn entropy_ncd(s1: &str, s2: &str) -> f64 {
     EntropyNCD::default().for_str(s1, s2).nval()
 }
@@ -323,7 +323,7 @@ pub fn entropy_ncd(s1: &str, s2: &str) -> f64 {
 ///     assert_eq!(roberts("abc", "acbd"), 0.8571428571428571);
 ///
 /// [Roberts similarity]: https://github.com/chrislit/abydos/blob/master/abydos/distance/_roberts.py
-
+#[cfg(feature = "std")]
 pub fn roberts(s1: &str, s2: &str) -> f64 {
     Roberts::default().for_str(s1, s2).nval()
 }

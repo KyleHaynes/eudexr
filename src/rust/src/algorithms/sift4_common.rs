@@ -1,5 +1,5 @@
 //! Sift4 distance
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 use alloc::vec::Vec;
 use core::num::Wrapping;
 

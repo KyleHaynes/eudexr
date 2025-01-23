@@ -1,10 +1,7 @@
 //! Cosine similarity
-
-use extendr_api::prelude::*;
-
+#![cfg(feature = "std")]
 use crate::counter::Counter;
-// use crate::{Algorithm, Result};
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 
 /// [Cosine similarity] is the cosine of the angle between two vectors.
 ///
@@ -15,7 +12,6 @@ use crate::algorithm::Algorithm
 #[derive(Default)]
 pub struct Cosine {}
 
-#[extendr]
 impl Algorithm<f64> for Cosine {
     fn for_iter<C, E>(&self, s1: C, s2: C) -> Result<f64>
     where
@@ -66,9 +62,4 @@ mod tests {
         let ok = is_close(act, exp);
         assert!(ok, "cosine({}, {}) is {}, not {}", s1, s2, act, exp);
     }
-}
-
-extendr_module! {
-    mod cosine;
-    impl Cosine;
 }

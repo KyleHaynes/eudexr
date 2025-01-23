@@ -1,5 +1,5 @@
 //! Smith-Waterman sequence alignment
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 use alloc::vec;
 use alloc::vec::Vec;
 

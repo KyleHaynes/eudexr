@@ -1,7 +1,7 @@
 //! Tversky index
-
+#![cfg(feature = "std")]
 use crate::counter::Counter;
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 
 /// [Tversky similarity] is a generalization of [`SorensenDice`] and [`Jaccard`].
 ///

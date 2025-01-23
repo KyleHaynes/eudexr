@@ -1,5 +1,5 @@
 //! Prefix similarity
-use crate::algorithm::Algorithm
+use crate::{Algorithm, Result};
 
 /// Prefix similarity is the length of the longest common prefix for the given sequences.
 ///
